@@ -1,7 +1,9 @@
 <script lang="ts" setup>
 import { myInventory } from '@/entities/inventory'
-</script>
 
+const invntSize = 25
+
+</script>
 <template>
-  <myInventory> </myInventory>
+  <myInventory :invent-size="invntSize"> </myInventory>
 </template>
