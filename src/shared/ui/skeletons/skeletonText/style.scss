@@ -1,0 +1,10 @@
+@use '../../styleConfig';
+
+.skeleton-text {
+  display: flex;
+  flex-direction: column;
+  &__item{
+    margin-block: .4rem;
+  }
+}
+

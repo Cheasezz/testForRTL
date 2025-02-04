@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import './style.scss'
-import { baseButton } from '@/shared/ui'
+import { baseButton, mySkeleton, skeletonText } from '@/shared/ui'
 </script>
 
 <template>
@@ -13,8 +13,12 @@ import { baseButton } from '@/shared/ui'
       />
     </div>
     <article class="sidebar__article">
-      <h2 class="h2">QWEr</h2>
-      <p class="p">qfasdf sdf sdf sdf sdfsdf sdf</p>
+      <h2 class="h2">
+        <mySkeleton />
+      </h2>
+      <p class="p">
+        <skeletonText :strCount="6"/>
+      </p>
     </article>
     <baseButton btnColor="white">Сбросить инвентарь</baseButton>
   </div>

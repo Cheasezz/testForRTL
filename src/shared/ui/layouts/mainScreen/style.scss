@@ -2,18 +2,18 @@
 
 .main {
   display: grid;
-  max-width: clamp(310px,70%, 850px);
+  max-width: clamp(310px,70%, 800px);
   height: 100vh;
   margin: 0 auto;
   place-content: center;
   grid-template:
-    'a b b' 35%
-    'a b b' 35%
-    'c c c ' 8% / 1fr 1.1fr 1fr;
+    'a b b' 40%
+    'a b b' 40%
+    'c c c ' 8% / 1fr 1.2fr 1fr;
 
   gap: 1rem;
   > div {
-    padding: 0.4rem;
+    padding: 0.7rem;
     border: styleConfig.$border-color 1px solid;
     border-radius: styleConfig.$border-radius;
     color: styleConfig.$white;
