@@ -1,0 +1,42 @@
+@use '../../styleConfig';
+
+.main {
+  display: grid;
+  max-width: clamp(310px,70%, 850px);
+  height: 100vh;
+  margin: 0 auto;
+  place-content: center;
+  grid-template:
+    'a b b' 35%
+    'a b b' 35%
+    'c c c ' 8% / 1fr 1.1fr 1fr;
+
+  gap: 1rem;
+  > div {
+    padding: 0.4rem;
+    border: styleConfig.$border-color 1px solid;
+    border-radius: styleConfig.$border-radius;
+    color: styleConfig.$white;
+    background-color: styleConfig.$main-color;
+    overflow: hidden;
+  }
+  &__sidebar {
+    grid-area: a;
+  }
+  &__main-content {
+    grid-area: b;
+    padding: 0 !important;
+  }
+  &__footer {
+    grid-area: c;
+  }
+  @media screen and (max-width: 1000px) {
+    grid-template:
+      'b b b' 60%
+      'c c c ' 8% / 1fr 1fr 1fr;
+
+    &__sidebar {
+      display: none;
+    }
+  }
+}

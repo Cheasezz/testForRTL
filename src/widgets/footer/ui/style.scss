@@ -1,0 +1,14 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  &__h2 {
+    margin-bottom: 0;
+  }
+  &__button_close {
+    width: fit-content;
+    padding: 0;
+    margin-bottom: auto;
+  }
+}

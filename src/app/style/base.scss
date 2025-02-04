@@ -1,0 +1,23 @@
+@use '../../shared/ui/styleConfig';
+
+html {
+  font-size: clamp(18px, calc(1vh + 1vw), 28px);
+}
+body {
+  background-color: styleConfig.$bg-color;
+}
+.h2 {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+.p {
+  font-size: .7rem;
+}
+.img-wrapper {
+  border-radius: styleConfig.$border-radius;
+}
+.img {
+  width: 100%;
+  height: 100%;
+}

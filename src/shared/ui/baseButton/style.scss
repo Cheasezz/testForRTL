@@ -1,0 +1,23 @@
+@use '../styleConfig';
+
+.button {
+  width: 100%;
+  padding: 0.3rem 0.4rem;
+  font-size: 0.7rem;
+  background: inherit;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.1s linear;
+
+  &_white {
+    color: styleConfig.$bg-color;
+    background-color: styleConfig.$white;
+    box-shadow: 0 0 10px styleConfig.$white;
+    &:hover {
+      background-color: styleConfig.$white-hover;
+    }
+    &:active {
+      box-shadow: none;
+    }
+  }
+}
