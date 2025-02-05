@@ -2,7 +2,7 @@
 import { mainScreen } from '@/shared/ui'
 import { myFooter } from '@/widgets/footer'
 import { mySidebar } from '@/widgets/sidebar'
-import { interactiveInventory } from '@/widgets/interactiveInventory'
+import { myInventory } from '@/entities/inventory'
 </script>
 
 <template>
@@ -11,7 +11,7 @@ import { interactiveInventory } from '@/widgets/interactiveInventory'
       <mySidebar />
     </template>
     <template #mainContent>
-      <interactiveInventory />
+      <myInventory />
     </template>
     <template #footer>
       <myFooter />

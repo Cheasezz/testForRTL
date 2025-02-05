@@ -1,6 +1,9 @@
 <script lang="ts" setup>
+import { useItemStore } from '@/entities/inventory'
 import './style.scss'
 import { baseButton, mySkeleton, skeletonText } from '@/shared/ui'
+
+const itemStore = useItemStore()
 </script>
 
 <template>
@@ -17,9 +20,13 @@ import { baseButton, mySkeleton, skeletonText } from '@/shared/ui'
         <mySkeleton />
       </h2>
       <p class="p">
-        <skeletonText :strCount="6"/>
+        <skeletonText :strCount="6" />
       </p>
     </article>
-    <baseButton btnColor="white">Сбросить инвентарь</baseButton>
+    <baseButton
+      @click="itemStore.$reset"
+      btnColor="white"
+      >Сбросить инвентарь</baseButton
+    >
   </div>
 </template>
